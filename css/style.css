@@ -1,17 +1,24 @@
 body {
-  background-color: #621402; }
+  background-color: #621402;
+  color: #fff; }
+
+* {
+  box-sizing: border-box; }
 
 .container {
   max-width: 1170px;
   margin: 0 auto; }
 
-.header_body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+.header {
+  background: url(../img/bg.png) center top/cover no-repeat;
+  min-height: 100vh; }
+  .header_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px; }
 
 .menu {
   display: flex;
@@ -37,5 +44,99 @@ body {
   color: #fff;
   display: flex;
   align-items: center; }
+
+.film {
+  color: #fff;
+  margin-top: 60px;
+  display: flex;
+  align-items: center; }
+  .film_subtitle {
+    opacity: 0.5;
+    font-size: 24px;
+    line-height: 150%; }
+  .film_title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 11px;
+    margin-bottom: 23px; }
+  .film_text {
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 560px; }
+  .film_trailer {
+    margin: auto; }
+  .film_details {
+    display: flex;
+    align-items: center;
+    margin-top: 50px; }
+
+.time {
+  display: flex;
+  align-items: center; }
+  .time_icon {
+    margin-right: 14px; }
+
+.raiting {
+  display: flex;
+  align-items: center;
+  margin-left: 34px; }
+  .raiting_icon {
+    margin-right: 14px; }
+  .raiting_strong {
+    font-size: 24px;
+    line-height: 150%; }
+
+.session {
+  padding-top: 46px;
+  padding-bottom: 64px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .session_item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: background-color 0.2s;
+    cursor: pointer; }
+    .session_item:hover {
+      background-color: #fe8e05;
+      color: #621402; }
+  .session_label {
+    margin-bottom: 20px;
+    display: block; }
+  .session_month {
+    font-size: 16px;
+    line-height: 19px; }
+  .session_day {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 35px; }
+  .session_week {
+    font-size: 19px;
+    line-height: 22px; }
+
+.date_block {
+  display: flex; }
+
+.select {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: #fff;
+  padding: 18px;
+  box-sizing: border-box;
+  margin-top: 15px; }
+  .select_cinema {
+    min-width: 470px; }
 
 /*# sourceMappingURL=style.css.map */
