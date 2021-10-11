@@ -3,12 +3,15 @@ body
     color: #fff
 *
     box-sizing: border-box
+.hamburger
+    display: none
 .container
     max-width: 1170px
     margin: 0 auto
 .header
     background: url(../img/bg.png) center top/cover no-repeat
-    min-height: 100vh
+    padding-bottom: 60px
+    
     &_body
         display: flex
         justify-content: space-between
@@ -16,6 +19,9 @@ body
         font-family: 'Roboto', sans-serif
         padding-top: 30px
         padding-bottom: 30px
+.nav
+    position: relative
+
 .menu
     display: flex
     margin: 0
@@ -28,6 +34,8 @@ body
     &_link
         color: #fff
         text-decoration: none
+        &:hover
+            opacity: 0.8
 .ava
     width: 33px
     height: 33px
@@ -125,7 +133,9 @@ body
     box-sizing: border-box
     margin-top: 15px
     &_cinema
-        min-width: 470px
+        width: 470px
+.option
+    background: #621402
 .sheme
     &_body
         background: rgba(36, 36, 36, 0.18)
@@ -148,11 +158,15 @@ body
     &:hover
         fill: #fe8e05
         cursor: not-allowed
+.sheme-svg
+    max-width: 1170px
+    min-height: 600px
 .legend
     display: flex
     align-items: center
     border-top: 1px solid rgba(255, 255, 255, 0.5)
     max-width: 1024px
+    width: 90%
     margin: auto
     padding-top: 22px
     padding-bottom: 38px
@@ -186,3 +200,69 @@ body
     display: block
     padding: 24px 52px
     text-decoration: none
+@media (max-width: 1200px) 
+    .container
+        max-width: 960px
+    .select_cinema
+        width: 100%
+@media (max-width: 992px) 
+    .container
+        max-width: 750px
+    .sheme-svg
+        max-width: 750px
+    .session
+        flex-wrap: wrap
+        &_date
+            flex-basis: 70%
+            margin-bottom: 40px
+        &_time
+            order: 2
+        &_cinema
+            
+            order: 3
+        .menu
+            &_item
+                margin-right: 20px
+@media (max-width: 768px) 
+    .container
+        width: 90%
+    .sheme-svg
+        width: 90%
+        min-height: 0
+    .menu
+        position: absolute
+        left: 0
+        top: 40px
+        padding: 20px
+        margin-left: 0
+        flex-direction: column
+        background-color: #621402
+        z-index: 9
+        border-radius: 10px
+        margin-left: 20px
+        opacity: 0
+        visibility: hidden
+        transform: translateY(100%)
+        transition: opacity 0.5s , transorm 0.5s
+    .hamburger
+        background-color: transparent
+        border: none
+        width: 40px
+        height: 40px
+        margin-left: 10px
+        display: block
+    .menu_item
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+    .is-open
+        opacity: 1
+        visibility: visible
+        transform: translateY(0)
+    .film_trailer
+        margin-right: auto
+        margin-left: 0
+        margin-top: 40px
+    .film
+        flex-direction: column
+    
